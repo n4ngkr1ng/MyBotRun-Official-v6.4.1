@@ -139,10 +139,12 @@ Func btnStart()
 	; decide when to run
 	EnableControls($frmBotBottom, False, $frmBotBottomCtrlState)
 	Local $RunNow = $BotAction <> $eBotNoAction
+	AccStartInit() 			;Chalicucu init COC Account environment
 	If $RunNow Then
 		BotStart()
 	Else
 		$BotAction = $eBotStart
+		AccStartInit()		;Chalicucu init COC Account environment
 	EndIf
 			$troops_maked_after_fullarmy= false ; reset due to start button pressed
 			$actual_train_skip = 0
