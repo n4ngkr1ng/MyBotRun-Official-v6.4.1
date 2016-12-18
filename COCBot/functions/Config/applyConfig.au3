@@ -2844,6 +2844,30 @@ chkskipDonateNearFulLTroopsEnable()
 	GUICtrlSetData($txtMinDark, $itxtMinDE)
 	GUICtrlSetData($txtExpectedDE, $itxtExpectedDE)
 #Ce
+
+	;chalicucu & demen:  switchcocacc
+	If $ichkSwitchAcc = 1 Then
+	   GUICtrlSetState($chkSwitchAcc, $GUI_CHECKED)
+    	Else
+	   GUICtrlSetState($chkSwitchAcc, $GUI_UNCHECKED)
+    	EndIf
+	If $AccRelaxTogether = 1 Then
+	   GUICtrlSetState($chkAccRelax, $GUI_CHECKED)
+    	Else
+	   GUICtrlSetState($chkAccRelax, $GUI_UNCHECKED)
+    	EndIf
+	If $iChkAtkPln Then
+	   GUICtrlSetState($chkAtkPln, $GUI_CHECKED)
+	Else
+	   GUICtrlSetState($chkAtkPln, $GUI_UNCHECKED)
+	EndIf
+	
+	GUICtrlSetData($txtTotalCoCAcc, IniRead($profile, "switchcocacc" , "totalacc" ,"0"))
+	GUICtrlSetData($txtAccBottingOrder, IniRead($profile, "switchcocacc" , "order" ,"123"))
+	GUICtrlSetData($txtProfileIdxOrder, IniRead($profile, "switchcocacc" , "profile" ,"123"))
+	_GUICtrlComboBox_SetCurSel($cmbSwitchMode, $iSwitchMode)
+	;switchcocacc
+	
 	; Reenabling window redraw - Keep this last....
 
 	IF $iGUIEnabled = 0 Then
