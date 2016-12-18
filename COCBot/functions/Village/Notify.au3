@@ -27,7 +27,7 @@ Func NotifyReport()
 		NotifylPushBulletMessage($NotifyOrigin & ":" & "\n" & " [" & GetTranslated(620,109, "G") & "]: " & _NumberFormat($iGoldCurrent) & " [" & GetTranslated(620,110, "E") & "]: " & _NumberFormat($iElixirCurrent) & " [" & GetTranslated(620,111, "DE") & "]: " & _NumberFormat($iDarkCurrent) & "  [" & GetTranslated(620,112, "T") & "]: " & _NumberFormat($iTrophyCurrent) & " [" & GetTranslated(620,105, "No. of Free Builders") & "]: " & _NumberFormat($iFreeBuilderCount))
 	EndIf
 	If $NotifyAlertLastAttack = 1 Then
-		If Not ($iGoldLast = "" And $iElixirLast = "") Then NotifylPushBulletMessage($NotifyOrigin & " | Last Gain :" & "\n" & " [" & GetTranslated(620,109, "G") & "]: " & _NumberFormat($iGoldLast) & " [" & GetTranslated(620,110, "E") & "]: " & _NumberFormat($iElixirLast) & " [" & GetTranslated(620,111, "DE") & "]: " & _NumberFormat($iDarkLast) & "  [" & GetTranslated(620,112, "T") & "]: " & _NumberFormat($iTrophyLast))
+		If Not ($iGoldLast = "" And $iElixirLast = "") Then _PushBullet("[" & _NumberFormat($nCurCOCAcc) & "] " & $iOrigPushBullet & " | Last Gain :" & "\n [" & GetTranslated(620,35, "G") & "]: " & _NumberFormat($iGoldLast) & " [" & GetTranslated(620,36, "E") & "]: " & _NumberFormat($iElixirLast) & " [" & GetTranslated(620,37, "D") & "]: " & _NumberFormat($iDarkLast) & "  [" & GetTranslated(620,38, "T") & "]: " & _NumberFormat($iTrophyLast))		;Chalicucu
 	EndIf
 	If _Sleep($iDelayReportPushBullet1) Then Return
 	checkMainScreen(False)
